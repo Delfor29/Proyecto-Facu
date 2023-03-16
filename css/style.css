@@ -96,9 +96,7 @@ nav .content .logo a {
   flex-wrap: wrap;
   margin: auto;
 }
-/* .separate {
-  height: 120px;
-} */
+
 .title {
   display: flex;
   flex-wrap:nowrap;
@@ -178,7 +176,7 @@ nav .content .logo a {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgb(0, 0, 0, 0.9);
+  background-color: rgb(0, 0, 0, 0.75);
   height: 100%;
   width: 100%;
   z-index: 100;
@@ -204,6 +202,20 @@ nav .content .logo a {
   max-width: 90%;
   max-height: 90%;
   object-fit: contain;
+}
+
+/* ABOUT ME */
+/* .separate {
+  height: 120px;
+} */
+.about-me{
+  width: 80%;
+  margin: auto;
+  color:antiquewhite;
+  text-align: justify;
+  font-size: 35px;
+  font-weight: 900;
+  letter-spacing: 0.05cm;
 }
 
 /* FORM*/
@@ -255,7 +267,7 @@ textarea {
   z-index: 99;
   border: none;
   outline: none;
-  background-color: red;
+  background-color: #b3140c;
   color: white;
   cursor: pointer;
   padding: 15px 18px;
@@ -268,6 +280,7 @@ textarea {
   grid-area: final;
   display: flex;
   justify-content: space-between;
+  width: 100%;
   margin-top: 2em;
   padding: 10px;
   border-top: 2px solid #fff;
@@ -289,6 +302,10 @@ textarea {
   display: block;
   max-height: 25px;
 }
+
+
+/* MEDIA QUERIES */
+
 @media (max-width: 768px) {
   .main-page .modal-image img {
     width: 95%;
