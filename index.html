@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="shortcut icon" href="img/FacuIco.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"/>
     <script
       src="https://kit.fontawesome.com/5896e44278.js"
@@ -19,25 +20,24 @@
         HEADER AND NAVIGATION BAR
      -->
     <header id="head">
-      <nav>
-        <input type="checkbox" name="show-menu" id="show-menu" />
-        <label for="show-menu" class="menu-icon"
-          ><i class="fa-solid fa-bars"></i
-        ></label>
-        <div class="content">
+      <nav class="navbar">
           <div class="logo">
             <a href="index.html">FACU AHUMADA</a>
           </div>
-          <ul class="links">
-            <li class="links"><a href="#Dakar">Rally Dakar</a></li>
-            <li class="links"><a href="#WRC">WRC</a></li>
-            <li class="links"><a href="#RallyArg">Rally argentino</a></li>
-            <li class="links"><a href="#Other">Other sports</a></li>
-            <li class="links"><a href="#Portait">Portait</a></li>
-            <li class="links"><a href="#AboutMe">About me</a></li>
-            <li class="links"><a href="#Contact">Contact</a></li>
+          <ul class="nav-menu">
+            <li class="nav-item"><a href="#Dakar">Rally Dakar</a></li>
+            <li class="nav-item"><a href="#WRC">WRC</a></li>
+            <li class="nav-item"><a href="#RallyArg">Rally argentino</a></li>
+            <li class="nav-item"><a href="#Other">Other sports</a></li>
+            <li class="nav-item"><a href="#Portait">Portait</a></li>
+            <li class="nav-item"><a href="#AboutMe">About me</a></li>
+            <li class="nav-item"><a href="#Contact">Contact</a></li>
           </ul>
-        </div>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
       </nav>
     </header>
     <!-- 
@@ -50,7 +50,7 @@
       <section class="container">
         <div class="title" id="Dakar">
           <div class="dakar">
-            <img src="img/Dakar.png" alt="" />
+            <img src="img/Dakar.png" alt="Dakar Logo" />
           </div>
           DAKAR
         </div>
@@ -74,7 +74,7 @@
         </figure>
         <div class="title" id="WRC">
           <div class="WRC">
-            <img src="img/wrc-white.svg" alt="" />
+            <img src="img/wrc-white.svg" alt="WRC Logo" />
           </div>
           WRC
         </div>
@@ -238,37 +238,37 @@
       <!-- 
             FORM
          -->
-      <div class="form-content" id="Contact">
+      <form class="form-content" id="Contact" method="post">
         <div class="form-title">Contact me</div>
-        <div class="form-group">
-          <input type="text" name="" id="" placeholder="NAME" required="True" />
-        </div>
-        <div class="form-group">
-          <input type="tel" name="" id="" placeholder="PHONE" required="True" />
-        </div>
-        <div class="form-group">
+        <label class="form-group" for="name">
+          <input type="text" name="name" id="name" placeholder="Name" required/>
+        </label>
+        <label class="form-group" for="tel">
+          <input type="tel" name="tel" id="tel" placeholder="Phone" required />
+        </label>
+        <label class="form-group" for="email">
           <input
             type="email"
-            name=""
-            id=""
-            placeholder="EMAIL"
-            required="True"
+            name="email"
+            id="email"
+            placeholder="Email"
+            required
           />
-        </div>
-        <div class="form-group">
+        </label>
+        <label class="form-group" for="message">
           <textarea
             name="message"
             id="message"
             cols="30"
             rows="10"
-            placeholder="YOUR MESSAGE"
+            placeholder="Your message"
             required="True"
           ></textarea>
-        </div>
+        </label>
         <div class="form-group">
           <input type="submit" value="Send" />
         </div>
-      </div>
+      </form>
     </main>
     <!-- 
         FOOTER 
@@ -278,7 +278,7 @@
         Delfor Fuente - 2022 | Todos los derechos reservados.
       </span>
       <ul class="social">
-        <li><a href="mailito:rcfacundo@gmail.com">rcfacundo@gmail.com</a></li>
+        <li><a href="mailito://rcfacundo@gmail.com">RCFACUNDO@GMAIL.COM</a></li>
         <li>
           <a
             href="https://www.instagram.com/facundo_ahumada_fotografia/"

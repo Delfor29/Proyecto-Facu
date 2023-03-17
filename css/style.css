@@ -16,77 +16,76 @@ body {
   background-color: black;
 }
 a {
-  color: #fff;
+  color: #fffeee;
 }
 
 /* NAVBAR */
 #head {
   grid-area: head;
-  color: #fff;
+  color: #fffeee;
   width: 100%;
   height: 100vh;
   background-image: url(../img/Fondo.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   filter: opacity(0.9);
 }
-#head nav {
-  position: relative;
+.navbar {
   display: flex;
-  height: 150px;
-  align-items: center;
-}
-nav .content {
-  display: flex;
+  height: 75px;
   width: 100%;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  background-color: rgb(0, 0, 0, 0.4);
 }
-nav .content .links {
+.nav-menu {
   display: flex;
-  align-self: center;
-  margin: 0 30px;
-  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  justify-content: space-evenly;
+  text-align: center;
 }
-nav .content .logo a {
-  color: #fff;
+.logo a {
+  color: #fffeee;
   font-size: 50px;
   text-decoration: none;
   width: 341px;
   margin: 0 25px;
   text-align: center;
 }
-.content .links li {
+.nav-menu li {
   list-style: none;
 }
-.content .links li a {
+.nav-menu li a {
   text-decoration: none;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 500;
-  padding: 10px;
   border-radius: 5px;
-  transition: all 1s ease;
+  transition: all 0.2s ease;
 }
-.content .links li:hover a {
+.nav-menu li:hover a {
   filter: drop-shadow(10px 10px 15px black);
-
 }
-.content .links li:visited a {
+.nav-item li:visited a {
   text-decoration: none;
-  color: #fff;
 }
 
 /*HAMBURGER MENU*/
-#head .menu-icon {
-  font-size: 20px;
+.hamburger {
+  display: none;
   cursor: pointer;
-  line-height: 70px;
-  width: 70px;
-  text-align: center;
-  display: none;
 }
-#head input[type="checkbox"] {
-  display: none;
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #fffeee;
 }
 
 /* PRINCIPAL PAGE */
@@ -99,8 +98,8 @@ nav .content .logo a {
 
 .title {
   display: flex;
-  flex-wrap:nowrap;
-  justify-content:space-around;
+  justify-content: center;
+  gap: 2%;
   align-items: center;
   min-width: 100%;
   max-height: 420px;
@@ -108,10 +107,11 @@ nav .content .logo a {
   margin: auto;
   font-size: 60px;
   text-align: center;
+  font-variant: small-caps;
   color: #fff;
 }
 #Dakar {
-    background: linear-gradient(#000, #aa3e08, #000);
+  background: linear-gradient(#000, #aa3e08, #000);
 }
 .dakar {
   padding: 10px;
@@ -119,7 +119,7 @@ nav .content .logo a {
   padding: 2px;
 }
 #WRC {
-    background: linear-gradient(#000, #FC4C02, #000);
+  background: linear-gradient(#000, #fc4c02, #000);
 }
 .WRC img {
   display: block;
@@ -130,8 +130,8 @@ nav .content .logo a {
   justify-content: center;
   padding: 2px;
 }
-#RallyArg{
-    background:linear-gradient(#000, #04A5DC, #000);
+#RallyArg {
+  background: linear-gradient(#000, #04a5dc, #000);
 }
 .RallyArg {
   align-items: center;
@@ -166,17 +166,12 @@ nav .content .logo a {
   filter: blur(0);
 }
 
-/*SCROLLBAR*/
-::-webkit-scrollbar {
-  display: none;
-}
-
 /* MODAL IMAGE */
 .main-page .modal-image {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgb(0, 0, 0, 0.75);
+  background-color: rgb(0, 0, 0, 0.87);
   height: 100%;
   width: 100%;
   z-index: 100;
@@ -205,17 +200,16 @@ nav .content .logo a {
 }
 
 /* ABOUT ME */
-/* .separate {
-  height: 120px;
-} */
-.about-me{
+
+.about-me {
   width: 80%;
   margin: auto;
-  color:antiquewhite;
+  color: rgba(188, 188, 188, 0.649);
   text-align: justify;
   font-size: 35px;
   font-weight: 900;
   letter-spacing: 0.05cm;
+  font-variant: small-caps;
 }
 
 /* FORM*/
@@ -226,31 +220,37 @@ nav .content .logo a {
   color: #fff;
   border: 2px solid #fff;
   border-radius: 12px;
+  letter-spacing: 0.05cm;
+  font-variant: small-caps;
 }
 .form-title {
   margin: 15px;
-  font-size: 30px;
+  font-size: 33px;
   text-align: center;
 }
 .form-group input,
 textarea {
   width: 90%;
   height: auto;
-  margin: 1.5% 5%;
+  margin: 1% 5%;
   color: #fff;
-  font-size: larger;
+  font-size: 30px;
   resize: none;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid grey;
   outline: none;
+  letter-spacing: 0.05cm;
 }
 textarea {
   border: 1px solid grey;
+  max-height: 280px;
+  border-radius: 5px;
+  font-variant: small-caps;
 }
 .form-group input[type="submit"] {
   color: #fff;
-  font-size: larger;
+  font-size: 20px;
   padding: 10px;
   background-color: transparent;
   border: 1px solid #fff;
@@ -285,15 +285,15 @@ textarea {
   padding: 10px;
   border-top: 2px solid #fff;
   color: #fff;
+  font-size: 21px;
 }
 .social {
   display: flex;
   justify-content: space-between;
-  font-size: 20px;
+  gap: 20px;
 }
 .social li {
   list-style: none;
-  padding: 0 10px;
 }
 .social li a {
   text-decoration: none;
@@ -303,24 +303,65 @@ textarea {
   max-height: 25px;
 }
 
-
 /* MEDIA QUERIES */
 
-@media (max-width: 768px) {
+@media (max-width: 1096px) {
+  .navbar {
+    justify-content: center;
+  }
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 75px;
+    gap: 0;
+    flex-direction: column;
+    background-color: grey;
+    opacity: 0.9;
+    width: 100%;
+    height: calc(100vh - 75px);
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-item {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    margin: auto;
+  }
+  .nav-item:hover {
+    transition: 0.4s;
+    box-shadow: 10px 5px 5px #dddddd;
+  }
+  .nav-menu li:hover a {
+    filter: none;
+  }
+  .nav-menu.active {
+    left: 0;
+  }
   .main-page .modal-image img {
     width: 95%;
   }
-}
-@media (max-width: 600px) {
-  .body {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "head"
-      "portait"
-      "main"
-      "final";
+  .img-container {
+    max-width: 100%;
+    height: auto;
   }
-  .main-page .modal-image img {
-    max-width: 95%;
+  
+  .img-container img {
+    width: 100%;
+    height: auto;
   }
 }
