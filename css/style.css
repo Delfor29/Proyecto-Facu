@@ -224,9 +224,10 @@ a {
   font-variant: small-caps;
 }
 .form-title {
-  margin: 15px;
+  margin: 10px;
   font-size: 33px;
   text-align: center;
+  font-variant: normal;
 }
 .form-group input,
 textarea {
