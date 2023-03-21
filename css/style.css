@@ -1,11 +1,12 @@
 * {
-  font-family: "Bebas Neue", cursive;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
 body {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 900;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
@@ -107,7 +108,7 @@ a {
   margin: auto;
   font-size: 60px;
   text-align: center;
-  font-variant: small-caps;
+  /* font-variant: small-caps; */
   color: #fff;
 }
 #Dakar {
@@ -202,26 +203,47 @@ a {
 /* ABOUT ME */
 
 .about-me {
-  width: 80%;
+  width: 90%;
   margin: auto;
   color: rgba(188, 188, 188, 0.649);
   text-align: justify;
-  font-size: 35px;
-  font-weight: 900;
-  letter-spacing: 0.05cm;
-  font-variant: small-caps;
+  font-size: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    'title title'
+    'side-left side-right';
+}
+.title{
+  grid-area: title;
+}
+.side-left{
+  grid-area: side-left;
+  display: grid;
+  place-content: center;
+}
+.side-left img{
+  width: 100%;
+  height: auto;
+}
+.side-right{
+  grid-area: side-right;
+  display: grid;
+  place-content: center;
+  width: 100%;
+  height: auto;
+  padding-left: 8%;
 }
 
 /* FORM*/
 .form-content {
   width: 95%;
-  height: 95vh;
+  height: auto;
   margin: 5% 2.5%;
   color: #fff;
   border: 2px solid #fff;
   border-radius: 12px;
-  letter-spacing: 0.05cm;
-  font-variant: small-caps;
 }
 .form-title {
   margin: 10px;
@@ -233,32 +255,35 @@ a {
 textarea {
   width: 90%;
   height: auto;
-  margin: 1% 5%;
+  margin: 2% 5%;
   color: #fff;
-  font-size: 30px;
+  font-size: 22px;
   resize: none;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid grey;
   outline: none;
-  letter-spacing: 0.05cm;
 }
 textarea {
   border: 1px solid grey;
-  max-height: 280px;
   border-radius: 5px;
-  font-variant: small-caps;
 }
 .form-group input[type="submit"] {
   color: #fff;
-  font-size: 20px;
-  padding: 10px;
+  font-size: auto;
+  margin-top: 0;
+  font-size: 26px;
+  font-weight: 800;
   background-color: transparent;
   border: 1px solid #fff;
   border-radius: 5px;
   cursor: pointer;
 }
-
+.form-group input[type="submit"]:hover{
+  color: #000;
+  background-color: #ffffff;
+  transition: 0.4ms ease-in-out;
+}
 /* GO UP */
 .mybtn {
   display: none;
@@ -286,7 +311,8 @@ textarea {
   padding: 10px;
   border-top: 2px solid #fff;
   color: #fff;
-  font-size: 21px;
+  font-size: 16px;
+  font-weight: 100;
 }
 .social {
   display: flex;
@@ -364,5 +390,20 @@ textarea {
   .img-container img {
     width: 100%;
     height: auto;
+  }
+  .about-me{
+    grid-template-columns: auto;
+    grid-template-areas: 
+    'title'
+    'side-left'
+    'side-right';
+  }
+  .side-left, .side-right{
+    padding-left: 0;
+    width: 100%;
+    height: auto;
+  }
+  .side-right{
+    padding-top: 5%;
   }
 }
