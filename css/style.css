@@ -383,7 +383,7 @@ textarea {
     width: 95%;
   }
   .img-container {
-    width: 100%;
+    max-width: 100%;
     height: auto;
   }
   .img-container img {
