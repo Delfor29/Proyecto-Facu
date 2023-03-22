@@ -28,7 +28,7 @@ a {
   height: 100vh;
   background-image: url(../img/Fondo.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size:cover;
   background-position: center;
   filter: opacity(0.9);
 }
@@ -51,7 +51,7 @@ a {
   color: #fffeee;
   font-size: 50px;
   text-decoration: none;
-  width: 341px;
+  width: auto;
   margin: 0 25px;
   text-align: center;
 }
@@ -102,10 +102,9 @@ a {
   justify-content: center;
   gap: 2%;
   align-items: center;
-  min-width: 100%;
-  max-height: 420px;
-  padding: 30px;
-  margin: auto;
+  width: 100%;
+  height: auto;
+  /* padding: auto; */
   font-size: 60px;
   text-align: center;
   /* font-variant: small-caps; */
@@ -215,8 +214,9 @@ a {
     'title title'
     'side-left side-right';
 }
-.title{
+.about-me .title{
   grid-area: title;
+  margin: 4% 0;
 }
 .side-left{
   grid-area: side-left;
@@ -383,10 +383,9 @@ textarea {
     width: 95%;
   }
   .img-container {
-    max-width: 100%;
+    width: 100%;
     height: auto;
   }
-  
   .img-container img {
     width: 100%;
     height: auto;
@@ -400,10 +399,53 @@ textarea {
   }
   .side-left, .side-right{
     padding-left: 0;
-    width: 100%;
+    max-width: 100%;
     height: auto;
   }
   .side-right{
     padding-top: 5%;
   }
+}
+@media (max-width: 494px) {
+  .body{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "head head head"
+      "portait portait portait"
+      "main main main"
+      "final final final";
+  }
+  .logo a{
+  font-size: 36px;
+  }
+  .title{
+    font-size: 30px;
+    padding: 5% 0;
+  }
+  .dakar, .WRC, .RallyArg{
+    display: none;
+  }
+  .side-right{
+    font-size: 16px;
+  }
+.form-title {
+  font-size: 24px;
+}
+.form-group input,
+textarea {
+  font-size: 14px;
+}
+.form-group input[type="submit"] {
+  font-size: 16px;
+}
+#final{
+  font-size: 10px;
+}
+.social{
+  gap: 10px;
+}
+.inst-icon{
+  height: 16px;
+}
 }
