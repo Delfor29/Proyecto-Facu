@@ -51,13 +51,13 @@
       <!-- 
         IMAGES
       -->
+      <h2 class="title" id="Dakar">
+        <div class="dakar">
+          <img src="img/Dakar.png" alt="Dakar Logo" />
+        </div>
+        DAKAR
+      </h2>
       <section class="container">
-        <h2 class="title" id="Dakar">
-          <div class="dakar">
-            <img src="img/Dakar.png" alt="Dakar Logo" />
-          </div>
-          DAKAR
-        </h2>
         <figure class="img-container">
           <img class="zoom" src="img/Dakar/phdakar.jpg" alt="Dakar 2022" />
         </figure>
@@ -76,12 +76,14 @@
         <figure class="img-container">
           <img class="zoom" src="img/Dakar/phdakar5.jpg" alt="Dakar 2022" />
         </figure>
-        <h2 class="title" id="WRC">
-          <div class="WRC">
-            <img src="img/wrc-white.svg" alt="WRC Logo" />
-          </div>
-          WRC
-        </h2>
+      </section>
+      <h2 class="title" id="WRC">
+        <div class="WRC">
+          <img src="img/wrc-white.svg" alt="WRC Logo" />
+        </div>
+        WRC
+      </h2>
+      <section class="container">
         <figure class="img-container">
           <img
             class="zoom"
@@ -124,12 +126,14 @@
             src="img//WRC/phwrc.jpg"
             alt="World Rally Championship" />
         </figure>
-        <h2 class="title" id="RallyArg">
-          <div class="RallyArg">
-            <img src="img/RallyArgentino.png" alt="" />
-          </div>
-          Rally Argentino
-        </h2>
+      </section>
+      <h2 class="title" id="RallyArg">
+        <div class="RallyArg">
+          <img src="img/RallyArgentino.png" alt="" />
+        </div>
+        Rally Argentino
+      </h2>
+      <section class="container">
         <figure class="img-container">
           <img
             class="zoom"
@@ -160,7 +164,9 @@
             src="img/RallyArg/rally5.jpg"
             alt="Rally Argentino" />
         </figure>
-        <h2 class="title" id="Other">Other sports</h2>
+      </section>
+      <h2 class="title" id="Other">Other sports</h2>
+      <section class="container">
         <figure class="img-container">
           <img class="zoom" src="img//Other/_9DS0482.jpg" alt="Track day" />
         </figure>
@@ -179,7 +185,9 @@
         <figure class="img-container">
           <img class="zoom" src="img/Other/others4.jpg" alt="Track day" />
         </figure>
-        <h2 class="title" id="Portait">Portait</h2>
+      </section>
+      <h2 class="title" id="Portait">Portait</h2>
+      <section class="container">
         <figure class="img-container">
           <img class="zoom" src="img/Portait/portait.jpg" alt="Portait" />
         </figure>
@@ -189,12 +197,14 @@
         <figure class="img-container">
           <img class="zoom" src="img/Portait/portait2.jpg" alt="Portait" />
         </figure>
-      </section>
+        </section>
       <!-- 
         MODAL
        -->
       <div class="modal-image">
-        <span class="exit">&times;</span>
+        <div class="exit">&times;</div>
+        <div class="prev" onclick="plusSlides(-1)">&#10094;</div>
+        <div class="next" onclick="plusSlides(1)">&#10095;</div>
         <img src="" alt="" />
       </div>
       <!-- 
@@ -252,11 +262,11 @@
             required />
         </label>
         <label class="form-group" for="tel">
-          <input 
-            type="tel" 
-            name="tel" 
-            id="tel" 
-            placeholder="Phone" 
+          <input
+            type="tel"
+            name="tel"
+            id="tel"
+            placeholder="Phone"
             autocomplete="off"
             required />
         </label>
@@ -276,8 +286,7 @@
             cols="30"
             rows="10"
             placeholder="Your message"
-            required
-            >
+            required>
           </textarea>
         </label>
         <div class="form-group">

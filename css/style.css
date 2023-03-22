@@ -30,7 +30,6 @@ a {
   background-repeat: no-repeat;
   background-size:cover;
   background-position: center;
-  filter: opacity(0.9);
 }
 .navbar {
   display: flex;
@@ -100,30 +99,30 @@ a {
 .title {
   display: flex;
   justify-content: center;
-  gap: 2%;
+  gap: 3%;
   align-items: center;
   width: 100%;
   height: auto;
-  /* padding: auto; */
+  padding-top: 15px;
+  padding-bottom: 15px;
   font-size: 60px;
   text-align: center;
-  /* font-variant: small-caps; */
   color: #fff;
 }
 #Dakar {
   background: linear-gradient(#000, #aa3e08, #000);
 }
 .dakar {
-  padding: 10px;
+  display: grid;
+  place-content: center;
   text-align: center;
-  padding: 2px;
 }
 #WRC {
   background: linear-gradient(#000, #fc4c02, #000);
 }
 .WRC img {
   display: block;
-  max-width: 200px;
+  max-width: 150px;
   height: auto;
   align-items: center;
   text-align: center;
@@ -136,12 +135,17 @@ a {
 .RallyArg {
   align-items: center;
   text-align: center;
-  padding: 2px;
+  display: grid;
+  place-content: center;
+}
+.RallyArg img {
+  max-height: 100px;
 }
 .container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap:wrap;
   justify-content: center;
+  margin: auto;
 }
 .img-container {
   display: flex;
@@ -155,7 +159,7 @@ a {
 .zoom {
   max-width: 650px;
   max-height: 420px;
-  transition: 0.7s ease-in-out;
+  transition: 0.4s ease-in;
   opacity: calc(0.5);
   filter: blur(2px);
 }
@@ -177,10 +181,11 @@ a {
   z-index: 100;
   display: none;
 }
-.main-page .modal-image span {
+.exit {
   position: absolute;
   top: 0;
   right: 15px;
+  margin:auto;
   font-size: 45px;
   font-weight: bolder;
   color: #fff;
@@ -197,6 +202,29 @@ a {
   max-width: 90%;
   max-height: 90%;
   object-fit: contain;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  background-color: #b3140c;
+  font-weight: bold;
+  font-size: 30px;
+  border-radius: 3px 0 0 3px;
+  user-select: none;
+  z-index: 100;
+}
+.prev{
+  left: 0;
+  top: 50%;
+}
+.next{
+  right: 0;
+  top: 50%;
 }
 
 /* ABOUT ME */
@@ -270,10 +298,9 @@ textarea {
 }
 .form-group input[type="submit"] {
   color: #fff;
-  font-size: auto;
   margin-top: 0;
   font-size: 26px;
-  font-weight: 800;
+  font-weight: 550;
   background-color: transparent;
   border: 1px solid #fff;
   border-radius: 5px;
@@ -361,17 +388,12 @@ textarea {
     text-align: center;
     transition: 0.3s;
   }
-
   .nav-item {
     display: flex;
     justify-content: center;
     height: auto;
     width: 100%;
     margin: auto;
-  }
-  .nav-item:hover {
-    transition: 0.4s;
-    box-shadow: 10px 5px 5px #dddddd;
   }
   .nav-menu li:hover a {
     filter: none;
@@ -404,6 +426,9 @@ textarea {
   }
   .side-right{
     padding-top: 5%;
+  }
+  .prev, .next {
+    background-color: transparent;
   }
 }
 @media (max-width: 494px) {
