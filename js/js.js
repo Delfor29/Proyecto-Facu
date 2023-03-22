@@ -42,11 +42,10 @@ document.querySelectorAll('.container img').forEach((image, index) => {
     document.querySelector('.modal-image').style.display = "block";
   }
 });
-function closeModal() {
+
     document.querySelector('.modal-image .exit').onclick = ()=>{
         document.querySelector('.modal-image').style.display = "none";
     }
-};
 
 
 
